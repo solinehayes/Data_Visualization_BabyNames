@@ -13,6 +13,7 @@ This is a group project made with:
 - Berenger Zoé
 - Paliard Chloé
 - Riquier Melvin
+- Mickaela Astrand
 
 The code is in Javascript using the D3.js library.
 
