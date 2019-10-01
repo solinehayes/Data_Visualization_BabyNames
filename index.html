@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Call Me Baby</title>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript"src="js/d3/d3.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+		<style>
+			div.tooltip {	
+				position: absolute;			
+				text-align: center;								
+				padding: 2px;				
+				font: 12px sans-serif;		
+				background: lightsteelblue;	
+				border: 1px;		
+				border-radius: 8px;			
+				pointer-events: none;			
+			}
+		</style>
+    </head>
+
+    <body>
+		<div class="grid-container">
+			<div class="Title">
+				<!-- <h1>Call me Baby!</h1> -->
+				<img src = "images/title.png" alt="Call Me Baby title">
+			</div>
+			<!--<div class = "groupNames">
+				<p>Astrand Mikaela, Berenger Zoé, Hayes Soline, Paliard Chloé, and Riquier Melvin</p>
+			</div>-->
+			<div class="slider_year">
+				<input type="number" value="1980" id="year" oninput="showSliderValue()">
+				<div id="slider">
+					<div id="slider_handle" class="ui-slider-handle"></div>
+				</div>
+			</div>
+			<div class="search">
+				<input type="search" name="Search" id="search_name" placeholder="Search a name">
+				<button type="submit" id="search_btn"><i class="fa fa-search"></i></button>
+			</div>
+			<div class="name_graph">
+				<div class="ranking">
+					<div class="podium">
+						<p id="rank"></p>
+						<p id="one"></p>
+						<p id="two"></p>
+						<p id="three"></p>
+						<p id="four"></p>
+						<p id="five"></p>
+					</div>
+				</div>
+				<div class="name">
+					<p id="selectedName"></p>
+					<button type="submit" id="close_btn"><i class="fa fa-times"></i></button>
+				</div>
+			</div>
+			<div class="buttons" id="allbuttons">
+				<div >
+	  				<a href="#" class="button pink" id="girl_button">Girl</a>
+	  				<a href="#" class="button blue" id="boy_button">Boy</a>
+    			</div>
+    			<div >
+					<a>Sorting order :</a> 
+					<a title="Biggest bubbles on the middle and smallest ones on the outside" 
+					href="#" class="button grey" id="increasing_button">Ascending</a>
+					<a title="Smallest bubbles on the middle and biggest ones on the outside" 
+					  href="#" class="button grey" id="decreasing_button">Descending</a>
+					<a href="#" class="button grey" id="default_button">Default</a>
+				</div>
+				<div >
+					<a>Bubble sizes : </a>
+					<a title="Size of the bubbles are adapted to fill the space: better to see a small amount of data" 
+						href="#" class="button white" id="auto_button">Auto</a>
+					<a title="Size of the bubbles are constant : better to compare evolution over the years" 
+					  href="#" class="button white" id="constant_button">Constant</a>
+    			</div>
+			</div>
+			<div class="range_slider">
+				<div id="left_range_handle" class="ui-slider-handle"></div>
+				<div id="right_range_handle" class="ui-slider-handle"></div>
+			</div>
+			<div class="bubble_graph">
+				<div id="toast_container"></div>
+			</div>
+		</div>
+
+        <script type="text/javascript"src="js/baby.js"></script>
+    </body>
+
+</html>
